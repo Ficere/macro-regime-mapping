@@ -1,14 +1,15 @@
 ---
 name: macro-regime-mapping
-description: "Use when the user asks for macro regime analysis, global macro scenario mapping, asset-class implications, macro monthly review, policy-cycle inference, inflation/liquidity/geopolitical event analysis, or a structured investment watchlist. Builds non-advisory macro frameworks by mapping key variables, scenarios, triggers, invalidation conditions, and risk controls."
+description: "宏观推演：当用户需要宏观经济复盘、全球宏观情景推演、政策周期分析、大类资产敏感性、通胀/流动性/地缘事件分析、预期差识别、触发条件、失效信号和风险控制框架时使用。输出为非投资建议的结构化宏观研究。"
 license: MIT
 compatibility: "Requires current macro/market data access for factual updates. Outputs are analytical frameworks only and must not be treated as financial advice."
 metadata:
   version: "1.0.0"
   language: "zh-CN"
+  display_name: "宏观推演"
 ---
 
-# Macro Regime Mapping
+# 宏观推演
 
 ## When to Use This Skill
 
