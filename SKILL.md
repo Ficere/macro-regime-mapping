@@ -15,7 +15,7 @@ metadata:
 Use this skill when the user asks to:
 
 - Summarize the current global macro environment or monthly macro changes
-- Build a structured macro scenario map for China, the US, Japan, Europe, or global markets
+- Build a structured macro scenario map for any country, region, or global market
 - Analyze inflation, liquidity, fiscal policy, monetary policy, exchange rates, geopolitics, commodities, bonds, equities, or real estate as interacting variables
 - Translate macro variables into non-advisory asset-class implications
 - Identify expectation gaps, trigger points, invalidation conditions, and follow-up indicators
@@ -60,9 +60,9 @@ Classify inputs into:
 
 Give higher weight to data, policy constraints, and cross-asset confirmation than to narratives.
 
-### 3. Build the Domestic Macro Block
+### 3. Build the Domestic or Regional Macro Block
 
-For China-focused analysis, cover:
+For domestic or region-specific analysis, cover the relevant local variables:
 
 - Fiscal impulse: government bond issuance pace, front-loading, local-government capacity, debt-service pressure
 - Monetary and credit conditions: rate-cut probability, liquidity, social financing, deposit rates, bank behavior
@@ -79,7 +79,7 @@ For global analysis, cover:
 
 - US cycle: inflation, employment quality, household balance sheet, fiscal impulse, Fed reaction function, political calendar
 - Japan cycle: fiscal expansion, bond yields, yen pressure, equity-market policy support, inflation persistence
-- Europe and other regions: energy sensitivity, trade relations, industrial competitiveness, political risk
+- Other regions: energy sensitivity, trade relations, industrial competitiveness, political risk
 - Geopolitics: conflict probability, escalation path, negotiation incentives, supply-chain impact
 - Cross-border flows: dollar strength, reserve allocation, capital flight or repatriation, trade settlement behavior
 
@@ -199,7 +199,7 @@ Read `references/methodology.md` when:
 
 ## Style Guide
 
-- Prefer Chinese when the user writes in Chinese.
+- Respond in the user's language when possible, and support bilingual Chinese-English outputs when useful.
 - Be structured, concise, and explicit about causal chains.
 - Use tables when comparing scenarios, variables, or assets.
 - Do not imitate any creator’s personal voice, catchphrases, paywall structure, or identity.

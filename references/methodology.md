@@ -15,7 +15,7 @@ Use the following order for recurring macro reviews:
 7. **Scenario branches**: define base case, surprise case, downside case, and tail risk.
 8. **Watchlist and invalidation**: specify the next evidence that would confirm or break the view.
 
-## 2. Domestic China Framework
+## 2. Domestic or Regional Framework
 
 ### Fiscal impulse
 

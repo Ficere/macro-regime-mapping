@@ -35,7 +35,7 @@ The folder name and the `name` field in `SKILL.md` must both be `macro-regime-ma
 
 Use this skill when you ask an agent to:
 
-- 做月度宏观经济复盘，梳理中国、美国、日本、欧洲等主要经济体变化
+- 做月度宏观经济复盘，梳理不同国家、地区与主要经济体的变量变化
 - 分析财政、货币、通胀、地产、出口、地缘冲突、汇率和流动性之间的传导关系
 - 把宏观变量映射到汇率、债券、股票、大宗商品、地产、红利资产等大类资产敏感性
 - 构建 base / upside / downside / tail risk 情景表
@@ -45,7 +45,7 @@ Use this skill when you ask an agent to:
 ## 使用示例 / Examples
 
 ```text
-用 macro-regime-mapping 帮我做一份 2026 年 4 月全球宏观月度复盘，重点看中国财政退坡、美国通胀、油价和人民币。
+用 macro-regime-mapping 帮我做一份 2026 年 4 月全球宏观月度复盘，重点看主要经济体财政变化、美国通胀、油价和主要货币。
 ```
 
 ```text
@@ -53,7 +53,7 @@ Use this skill when you ask an agent to:
 ```
 
 ```text
-检查我的观点：今年中国通胀会回升，中债逻辑反转。请按变量、传导链、支持证据、反对证据和跟踪指标拆解。
+检查我的观点：今年某一经济体通胀会回升，本地债券逻辑可能反转。请按变量、传导链、支持证据、反对证据和跟踪指标拆解。
 ```
 
 ```text
