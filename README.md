@@ -6,9 +6,9 @@
 
 ## 生态 / Ecosystem
 
-This repository follows the Agent Skills open format: a skill is a folder containing a required `SKILL.md`, with optional `references/`, `scripts/`, and `assets/` for progressive disclosure.
+本仓库遵循 Agent Skills 开放格式：一个 Skill 是一个包含必需文件 `SKILL.md` 的目录，也可以按需加入 `references/`、`scripts/`、`assets/` 等资源，用于渐进式加载更详细的方法论、脚本或模板。
 
-Compatible with agents or platforms that support the Agent Skills convention.
+只要你的 Agent 或平台支持 Agent Skills 约定，就可以加载和使用本 Skill。
 
 ## 安装 / Install
 
@@ -19,21 +19,21 @@ npx skills add <owner>/macro-regime-mapping
 将 `<owner>` 替换为你的 GitHub 用户名或组织名。
 
 <details>
-<summary>Manual install</summary>
+<summary>手动安装 / Manual install</summary>
 
-Download or clone this repository, then place the folder in your agent’s skills directory, for example:
+下载或克隆本仓库，然后把整个目录放到你的 Agent 技能目录中，例如：
 
 ```text
 ~/.agents/skills/macro-regime-mapping/
 ```
 
-The folder name and the `name` field in `SKILL.md` must both be `macro-regime-mapping`.
+目录名和 `SKILL.md` frontmatter 中的 `name` 字段都应保持为 `macro-regime-mapping`。
 
 </details>
 
 ## 什么时候使用 / When to Use
 
-Use this skill when you ask an agent to:
+当你希望 Agent 完成以下任务时，可以使用本 Skill：
 
 - 做月度宏观经济复盘，梳理不同国家、地区与主要经济体的变量变化
 - 分析财政、货币、通胀、地产、出口、地缘冲突、汇率和流动性之间的传导关系
@@ -78,49 +78,49 @@ Use this skill when you ask an agent to:
 <details>
 <summary>月度宏观复盘模板</summary>
 
-1. Executive summary: three to five key changes
-2. Domestic block: fiscal, monetary, inflation, property, trade, consumption/investment
-3. Global block: US, Japan, Europe, geopolitics, dollar/liquidity
-4. Asset sensitivity map: FX, bonds, equities, commodities, real estate/yield assets
-5. Scenario table: base/upside/downside/tail risk
-6. Watchlist: next data releases, policy meetings, events, invalidation signals
-7. Risk disclaimer
+1. 摘要：提炼三到五个本期最重要的变化
+2. 本地或区域模块：财政、货币、通胀、地产、贸易、消费与投资
+3. 全球模块：主要经济体、地缘事件、美元与流动性
+4. 资产敏感性图谱：汇率、债券、权益、大宗商品、地产与类固收资产
+5. 情景表：基准情景、上行情景、下行情景、尾部风险
+6. 跟踪清单：后续数据、政策会议、关键事件与失效信号
+7. 风险提示：说明不确定性、适用边界与非投资建议属性
 
 </details>
 
 <details>
 <summary>事件冲击分析模板</summary>
 
-1. Event summary and immediate market reaction
-2. Actual economic transmission versus emotional pricing
-3. Stakeholder incentives and negotiation path
-4. Scenario branches with triggers
-5. Asset sensitivity and likely second-order effects
-6. What would change the conclusion
+1. 事件摘要：说明事件本身与市场即时反应
+2. 传导拆解：区分真实经济影响与情绪定价
+3. 利益相关方：分析各方动机、约束与谈判路径
+4. 情景分支：列出不同演化路径及触发条件
+5. 资产敏感性：讨论可能的一阶与二阶影响
+6. 失效条件：说明什么变化会推翻当前结论
 
 </details>
 
 <details>
 <summary>资产观点检查模板</summary>
 
-1. Asset and current consensus
-2. Macro drivers supporting the thesis
-3. Macro drivers against the thesis
-4. Cross-asset confirmation or contradiction
-5. Trigger/invalidation checklist
-6. Risk-reward assessment without direct advice
+1. 资产与当前共识：明确正在检查的观点
+2. 支持因素：列出支持该观点的宏观驱动
+3. 反对因素：列出削弱该观点的宏观约束
+4. 跨资产验证：检查其他资产是否确认或否定该逻辑
+5. 触发/失效清单：给出需要继续跟踪的信号
+6. 风险收益评估：只讨论敏感性与不确定性，不给出个性化买卖建议
 
 </details>
 
 ## 方法论 / Methodology
 
-The detailed framework lives in:
+更详细的方法论放在：
 
 ```text
 references/methodology.md
 ```
 
-Agents should load it when producing full reports, multi-country analysis, multi-asset scenario tables, or recurring macro reviews.
+当需要生成完整报告、多地区分析、多资产情景表或连续月度复盘时，Agent 应加载该参考文件。
 
 ## 目录结构 / Repository Structure
 
@@ -134,8 +134,6 @@ macro-regime-mapping/
 ```
 
 ## 免责声明 / Disclaimer
-
-This skill is for educational macro research only. It does not provide personalized investment advice, portfolio management, trading instructions, tax advice, or guaranteed forecasts. Users should independently verify data and evaluate their own risk tolerance before making financial decisions.
 
 本 Skill 仅用于宏观研究与教育分析，不构成个性化投资建议、交易指令、税务建议或收益承诺。涉及期货、杠杆、期权、反向产品等高风险工具时，应特别注意快速亏损与流动性风险。
 
