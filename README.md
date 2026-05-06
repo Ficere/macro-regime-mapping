@@ -13,10 +13,8 @@
 ## 安装 / Install
 
 ```bash
-npx skills add <owner>/macro-regime-mapping
+npx skills add Ficere/macro-regime-mapping
 ```
-
-将 `<owner>` 替换为你的 GitHub 用户名或组织名。
 
 <details>
 <summary>手动安装 / Manual install</summary>
