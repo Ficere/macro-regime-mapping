@@ -2,7 +2,7 @@
 
 一个用于宏观周期、政策变量、地缘事件与大类资产敏感性分析的 Agent Skill。
 
-它把宏观分析拆成「变量识别 → 传导链条 → 情景分支 → 资产敏感性 → 触发/失效条件 → 风险控制」的可复用工作流，适合月度宏观复盘、事件冲击分析、资产观点检查和投资研究笔记。
+它把宏观分析拆成「主轴识别 → 利益结构 → 数据锚定 → 政策信号 → 传导链条 → 情景分支 → 资产敏感性 → 触发/失效条件 → 风险控制」的可复用工作流，适合月度宏观复盘、年度/季度预测、事件冲击分析、资产观点检查和投资研究笔记。
 
 ## 生态 / Ecosystem
 
@@ -15,6 +15,8 @@
 ```bash
 npx skills add Ficere/macro-regime-mapping
 ```
+
+也可以将 `Ficere` 替换为你 fork 后的 GitHub 用户名或组织名。
 
 <details>
 <summary>手动安装 / Manual install</summary>
@@ -39,6 +41,7 @@ npx skills add Ficere/macro-regime-mapping
 - 构建 base / upside / downside / tail risk 情景表
 - 找预期差、触发条件、失效条件和后续跟踪指标
 - 复盘之前的宏观判断，并根据新证据更新观点
+- 做年度或季度预测，并区分方向置信度与时间节点置信度
 
 ## 使用示例 / Examples
 
@@ -65,13 +68,31 @@ npx skills add Ficere/macro-regime-mapping
 | 宏观复盘 | 按月或按事件梳理关键变量变化 | 需要实时数据时应联网或调用金融数据工具 |
 | 国内周期 | 分析财政、货币、通胀、地产、出口、消费和投资 | 不把单月数据机械外推 |
 | 全球周期 | 分析美国、日本、欧洲和地缘事件 | 区分真实经济冲击与情绪定价 |
+| 主轴识别 | 找出当前驱动宏观系统的最大结构性力量 | 需要写出主轴切换信号 |
+| 利益结构 | 分析政府、央行、企业、居民、外资等主体约束 | 不预测个人心理，只推演结构性行为 |
+| 数据锚定 | 用存量/流量、变化速率、历史分位和隐含预期定位阶段 | 不制造过度精确的点位预测 |
+| 政策信号 | 解读新增、减少、行动/表态偏差和先行动作 | 必须结合预算、执行和后续验证 |
 | 传导链 | 将变量连接成因果链 | 避免孤立结论 |
 | 情景分支 | 输出 base/upside/downside/tail risk | 每个情景都应有触发和失效条件 |
 | 资产敏感性 | 讨论 FX、债券、权益、大宗、红利资产 | 不输出个性化买卖建议 |
 | 预期差 | 找市场共识与数据/政策约束之间的偏差 | 必须说明为什么可能判断错误 |
 | 风险控制 | 标注高风险工具、杠杆、期货、波动风险 | 高风险产品需明确警示 |
+| 预测纪律 | 输出判断、核心逻辑、关键前提、失效条件和置信度 | 方向置信度与时间置信度分开标注 |
 
 ## 输出结构 / Output Structure
+
+<details>
+<summary>预测判断模板</summary>
+
+```text
+【判断】明确的方向性结论，一句话。
+【核心逻辑】1-3 条因果链，每条不超过 2 句。
+【关键前提】该判断成立所需的必要条件。
+【失效条件】哪些数据、政策或市场行为会证伪该判断。
+【置信度】方向置信度：高/中/低；时间节点置信度：高/中/低。
+```
+
+</details>
 
 <details>
 <summary>月度宏观复盘模板</summary>
@@ -116,9 +137,10 @@ npx skills add Ficere/macro-regime-mapping
 
 ```text
 references/methodology.md
+references/reasoning-framework.md
 ```
 
-当需要生成完整报告、多地区分析、多资产情景表或连续月度复盘时，Agent 应加载该参考文件。
+当需要生成完整报告、多地区分析、多资产情景表或连续月度复盘时，Agent 应加载 `references/methodology.md`。当任务涉及年度/季度预测、方向性判断、利益结构、政策信号解读、数据锚定或置信度分级时，Agent 应加载 `references/reasoning-framework.md`。
 
 ## 目录结构 / Repository Structure
 
@@ -128,7 +150,8 @@ macro-regime-mapping/
 ├── README.md
 ├── LICENSE
 └── references/
-    └── methodology.md
+    ├── methodology.md
+    └── reasoning-framework.md
 ```
 
 ## 免责声明 / Disclaimer

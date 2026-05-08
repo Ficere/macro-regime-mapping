@@ -4,7 +4,7 @@ description: "宏观推演：当用户需要宏观经济复盘、全球宏观情
 license: MIT
 compatibility: "Requires current macro/market data access for factual updates. Outputs are analytical frameworks only and must not be treated as financial advice."
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   language: "zh-CN"
   display_name: "宏观推演"
 ---
@@ -21,6 +21,7 @@ Use this skill when the user asks to:
 - Translate macro variables into non-advisory asset-class implications
 - Identify expectation gaps, trigger points, invalidation conditions, and follow-up indicators
 - Review prior macro calls and update a thesis based on new evidence
+- Produce annual or quarterly macro forecasts with clear assumptions, confidence levels, and invalidation criteria
 
 Do not use this skill for personalized financial advice, direct buy/sell instructions, or claims of guaranteed returns.
 
@@ -28,17 +29,18 @@ Do not use this skill for personalized financial advice, direct buy/sell instruc
 
 Treat macro analysis as a dynamic regime map, not a single forecast. Each output should connect:
 
-1. Current state
-2. Key drivers
+1. Current state and the dominant macro axis
+2. Key drivers and stakeholder incentives
 3. Transmission channels
-4. Scenario branches
-5. Asset-class sensitivity
-6. Confirmation and invalidation signals
-7. Risk controls and uncertainty
+4. Data anchors and policy signals
+5. Scenario branches
+6. Asset-class sensitivity
+7. Confirmation and invalidation signals
+8. Risk controls and uncertainty
 
 ## Required Workflow
 
-### 1. Define the Time Window
+### 1. Define the Time Window and Output Mode
 
 Clarify the observation window:
 
@@ -50,7 +52,27 @@ Clarify the observation window:
 
 If the user does not specify a window, default to the current month and the next one to three quarters.
 
-### 2. Separate Hard Data from Narrative
+Then identify the output mode:
+
+- Review mode: explain what changed and why
+- Forecast mode: state directional conclusions with assumptions and confidence levels
+- Shock mode: analyze event transmission and second-order effects
+- Thesis-check mode: test a user's claim against data, policy, positioning, and counterarguments
+
+### 2. Identify the Dominant Macro Axis
+
+Start by asking which structural force is currently driving the system:
+
+- Central-bank rate cycle: tightening, pause, easing, or re-acceleration
+- Dollar liquidity and credit cycle: expansion, contraction, refinancing stress, or reserve reallocation
+- Fiscal cycle: stimulus, austerity, front-loading, debt-service pressure, or deficit constraint
+- Geopolitical or trade-order shift: globalization, fragmentation, tariffs, sanctions, supply-chain relocation
+- Debt and balance-sheet cycle: leverage expansion, deleveraging, refinancing wall, collateral stress
+- Technology or industrial narrative: AI capex, energy transition, industrial upgrading, productivity shock
+
+Treat local variables as downstream functions of the dominant axis unless there is strong evidence of local decoupling. Explicitly state what would mark a regime switch.
+
+### 3. Separate Hard Data from Narrative
 
 Classify inputs into:
 
@@ -61,7 +83,7 @@ Classify inputs into:
 
 Give higher weight to data, policy constraints, and cross-asset confirmation than to narratives.
 
-### 3. Build the Domestic or Regional Macro Block
+### 4. Build the Domestic or Regional Macro Block
 
 For domestic or region-specific analysis, cover the relevant local variables:
 
@@ -74,7 +96,7 @@ For domestic or region-specific analysis, cover the relevant local variables:
 
 Always ask whether price recovery is demand-driven, cost-driven, or liquidity-driven.
 
-### 4. Build the External Macro Block
+### 5. Build the External Macro Block
 
 For global analysis, cover:
 
@@ -86,7 +108,19 @@ For global analysis, cover:
 
 Treat political events as economic incentives with deadlines, stakeholders, and negotiation payoffs.
 
-### 5. Map Transmission Channels
+### 6. Analyze Stakeholder Incentives
+
+For each major policy or event question, list the relevant stakeholders and constraints:
+
+- Government or fiscal authority: growth target, employment, debt service, social stability, election or term horizon
+- Central bank: inflation target, currency stability, financial stability, credibility, political pressure
+- Enterprises: margins, inventory, financing cost, export orders, capex incentives
+- Households: income expectation, debt burden, wealth effect, consumption willingness
+- Foreign capital or external counterparties: yield spread, geopolitical risk, hedging cost, exit constraints
+
+Do not predict personal psychology. Infer likely behavior from incentives, constraints, and available choices.
+
+### 7. Map Transmission Channels
 
 Use explicit causal chains. Examples:
 
@@ -98,7 +132,30 @@ Use explicit causal chains. Examples:
 
 Avoid isolated conclusions that do not show the mechanism.
 
-### 6. Create Scenario Branches
+### 8. Anchor with Data and Pricing
+
+Use data to locate the current stage and remaining space, not to create false point precision:
+
+- Stock versus flow: debt/GDP, housing inventory, credit stock, fiscal balance
+- Rate of change: acceleration, deceleration, inflection, base effect
+- Historical percentile: valuation, yield, spread, volatility, inventory
+- Policy rate versus market-implied rate: whether easing/tightening is already over-priced
+- Supply-demand gap: new supply, inventory digestion, replacement demand, subsidy pull-forward
+
+When market pricing has fully discounted a story, treat the story as vulnerable even if the direction is logically correct.
+
+### 9. Decode Policy Signals
+
+Read policy through actions, omissions, and implementation details:
+
+- Additive signal: a new policy reveals the problem being prioritized
+- Subtractive signal: a stopped or missing policy reveals what is being abandoned or deprioritized
+- Action versus rhetoric: when words conflict with implementation, prioritize actions
+- Preparatory signal: small technical measures may be laying the groundwork for larger regime changes
+
+Do not over-read slogans. Tie every policy interpretation to budget constraints, enforcement capacity, and observed follow-through.
+
+### 10. Create Scenario Branches
 
 For each major uncertainty, produce 2-4 branches:
 
@@ -117,7 +174,7 @@ For every branch, state:
 
 Never present one scenario as inevitable.
 
-### 7. Analyze Asset-Class Sensitivity
+### 11. Analyze Asset-Class Sensitivity
 
 Translate macro conclusions into asset-class sensitivity, not direct investment advice:
 
@@ -130,7 +187,7 @@ Translate macro conclusions into asset-class sensitivity, not direct investment 
 
 Use the language of “sensitivity,” “watch points,” and “risk-reward,” not “must buy” or “must sell.”
 
-### 8. Identify Expectation Gaps
+### 12. Identify Expectation Gaps
 
 Look for gaps between market consensus and observable constraints:
 
@@ -142,17 +199,29 @@ Look for gaps between market consensus and observable constraints:
 
 Expectation gaps should include both the opportunity and the reason they may be wrong.
 
-### 9. Add Risk Controls
+### 13. Add Forecast Discipline and Risk Controls
 
 Every output with asset implications must include:
 
 - What would prove the thesis wrong
 - Which data should be monitored next
 - Which part is high confidence and which part is speculative
+- Direction confidence and timing confidence separately when making forecasts
+- Key assumptions and their fragility
 - Whether the asset is driven by fundamentals, liquidity, policy, or crowd behavior
 - A reminder that this is not personalized financial advice
 
 For leveraged, futures, options, or inverse products, explicitly warn that they can suffer rapid losses and are unsuitable for most users.
+
+When the user asks for explicit predictions, use this format:
+
+```text
+【判断】一句话给出方向性结论
+【核心逻辑】1-3 条因果链
+【关键前提】该判断成立所需的必要条件
+【失效条件】什么证据会证伪该判断
+【置信度】方向置信度：高/中/低；时间节点置信度：高/中/低
+```
 
 ## Output Templates
 
@@ -197,6 +266,12 @@ Read `references/methodology.md` when:
 - The user asks for a full framework, reusable methodology, or detailed report
 - The task involves multiple countries or multiple asset classes
 - The output needs a scenario table, watchlist, or investment-style review
+
+Read `references/reasoning-framework.md` when:
+
+- The user asks for annual forecasts, quarterly predictions, or explicit directional calls
+- The output needs stakeholder incentives, data anchoring, policy-signal decoding, or confidence grading
+- The task involves distinguishing trend direction from timing or identifying common reasoning biases
 
 ## Style Guide
 
